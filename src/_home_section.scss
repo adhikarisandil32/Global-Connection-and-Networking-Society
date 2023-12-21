@@ -1,7 +1,7 @@
 @use "responsive";
 $orange: #eb6930;
 
-section.home-section {
+.home-section {
   $min-height: calc(100vh - 60px);
   display: flex;
   flex-direction: column-reverse;

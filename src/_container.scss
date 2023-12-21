@@ -1,5 +1,9 @@
+@use "responsive";
+
+$breakpoints: responsive.$breakpoints;
+
 div.container {
-  width: 90%;
+  width: min(map-get($breakpoints, "xl"), 90%);
   margin: 0 auto;
 }
 
