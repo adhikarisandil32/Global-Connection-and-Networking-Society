@@ -26,7 +26,7 @@
           <li><a href="#projects-section">Projects</a></li>
           <li><a href="#contact-section">Contacts</a></li>
           <li><a href="#leadership-section">Leadership</a></li>
-          <li><a href="#">News and Events</a></li>
+          <li><a href="#">News & Events</a></li>
         </ul>
         <div class="bars-container">
           <i class="fa-solid fa-bars" id="navigation-open-button"></i>
@@ -36,17 +36,25 @@
 
     <!-- Home Section -->
     <section class="home-section" id="home-section">
-      <aside class="text-container">
-        <p>
-          <span class="color-orange font-bold font-large">
-            Empowering Underserved <br />Communities <br />
-          </span>
-          <span>
-            and Underdeveloped Countries and People <br />Through Digital
-            Literacy, Globally.
-          </span>
-        </p>
-      </aside>
+      <div class="container">
+        <aside class="text-container">
+          <p>
+            <span class="color-orange">
+              Global Digital <br />
+              Environment Society
+            </span>
+            <span>
+              California-based non-profit, empowering underserved communities
+              and underdeveloped countries people through digital literacy,
+              globally.
+            </span>
+          </p>
+          <div class="button-container">
+            <a class="button" href="#contact-section">Contact</a>
+            <a class="button" href="#">News & Events</a>
+          </div>
+        </aside>
+      </div>
       <aside class="image-container" id="hero-image-container">
         <img src="assets/hero-image-1.jpg" alt="hero-image-1" />
         <img src="assets/hero-image-2.jpg" alt="hero-image-2" />
@@ -59,15 +67,24 @@
     <div class="container">
       <!-- expansion of home section -->
       <section class="expansion-of-home-section">
-        <p>
-          <span class="color-orange">Bridging the Divide:</span> The Crucial
-          Role of Digital Literacy in Underdeveloped Countries In a world
-          increasingly dominated by technology, digital literacy has become an
-          essential passport to progress, especially for those living in
-          underdeveloped countries. Equipping individuals with the skills to
-          navigate the digital landscape unlocks a treasure trove of
-          opportunities, paving the way for:
-        </p>
+        <div class="intro-para">
+          <div class="accordion-button" id="accordion-button">
+            <span class="title">Bridging the Divide Through</span>
+            <span class="angle-down" id="angle-down-icon">
+              <i class="fa-solid fa-angle-down"></i>
+            </span>
+          </div>
+          <div class="accordion-content" id="accordion-content">
+            <p>
+              The Crucial Role of Digital Literacy in Underdeveloped Countries
+              In a world increasingly dominated by technology, digital literacy
+              has become an essential passport to progress, especially for those
+              living in underdeveloped countries. Equipping individuals with the
+              skills to navigate the digital landscape unlocks a treasure trove
+              of opportunities, paving the way for:
+            </p>
+          </div>
+        </div>
         <ul>
           <li>
             <p>
@@ -79,7 +96,6 @@
               previously inaccessible. Participation in the global digital
               economy fuels local economies and fosters sustainable development.
             </p>
-            <div class="text-cover"></div>
           </li>
           <li>
             <p>
@@ -91,7 +107,6 @@
               upskilling, and access to higher education, fueling a more
               educated and competitive workforce.
             </p>
-            <div class="text-cover"></div>
           </li>
           <li>
             <p>
@@ -103,7 +118,6 @@
               awareness campaigns and disease prevention initiatives, leading to
               healthier populations.
             </p>
-            <div class="text-cover"></div>
           </li>
           <li>
             <p>
@@ -116,7 +130,6 @@
               media platforms enable communities to voice concerns, advocate for
               change, and hold leaders accountable.
             </p>
-            <div class="text-cover"></div>
           </li>
           <li>
             <p>
@@ -129,7 +142,6 @@
               transcends borders, promotes inclusivity, and propels communities
               towards a brighter future in the global economy.
             </p>
-            <div class="text-cover"></div>
           </li>
         </ul>
       </section>
@@ -348,10 +360,11 @@
     </div>
 
     <!-- Javascript Injection -->
-    <script type="text/javascript" src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
     <script
       src="https://kit.fontawesome.com/802aab03d5.js"
       crossorigin="anonymous"
     ></script>
+    <script type="text/javascript" src="script.js"></script>
   </body>
 </html>

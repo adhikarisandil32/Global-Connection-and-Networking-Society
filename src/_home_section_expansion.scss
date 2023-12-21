@@ -1,12 +1,57 @@
 @use "responsive";
+
 $orange: #eb6930;
+$orange-lighter: rgba($orange, 0.8);
 
 .expansion-of-home-section {
-  padding: 2rem 0;
+  position: relative;
+  transform: translateY(-75px);
+  z-index: 20;
 
-  & > p {
+  .intro-para {
     text-align: center;
     margin-bottom: 1rem;
+    background-color: $orange-lighter;
+    border-radius: 0.5rem;
+    text-align: justify;
+    color: #fff;
+    padding: 1rem;
+
+    .accordion-button {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      padding: 0.5rem 0;
+
+      span {
+        display: block;
+        font-weight: bold;
+      }
+
+      .angle-down {
+        transition: transform 0.25s linear;
+        transform-origin: center center;
+      }
+      .angle-down.rotate {
+        transform: rotate(90deg);
+      }
+    }
+
+    .accordion-content {
+      display: grid;
+      grid-template-rows: 0fr;
+      overflow: hidden;
+      transition: grid-template-rows 0.25s linear;
+
+      p {
+        min-height: 0;
+      }
+    }
+
+    .accordion-content.row-1 {
+      grid-template-rows: 1fr;
+    }
   }
 
   ul {
@@ -26,7 +71,6 @@ $orange: #eb6930;
       padding: 1rem;
       border-radius: 0.5rem;
       border: 1px solid hsl(0, 0%, 80%);
-      cursor: pointer;
       position: relative;
 
       @include responsive.sm {
@@ -46,20 +90,6 @@ $orange: #eb6930;
         span {
           color: $orange;
         }
-      }
-
-      .text-cover {
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        left: 0;
-        top: 0;
-        background-color: rgba(255, 255, 255, 0.5);
-        transition: height 0.5s linear;
-      }
-
-      &:hover .text-cover {
-        height: 0;
       }
     }
   }

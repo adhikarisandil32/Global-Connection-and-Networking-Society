@@ -18,22 +18,33 @@ navigationCloseButton.addEventListener("click", () => {
 
 //home-section-animation
 const heroImageContainer = document.getElementById("hero-image-container")
-
 const heroImageElements = [...heroImageContainer.children]
 
-heroImageElements.forEach((element, index) => {
-  element.style.left = `${index * 100}%`
+heroImageElements.forEach((element, idx) => {
+  element.style.left = `${idx * 100}%`
+  element.style.transition = "left 1s linear"
 })
 
-setInterval(() => {
-  heroImageElements.forEach((element) => {
-    element.style.left = `${element.style.left.slice(0, -1) - 100}%`
-  })
-  heroImageElements[0].style.left = `${(heroImageElements.length - 1) * 100}%`
-  heroImageElements.push(heroImageElements[0])
-  heroImageElements.splice(0, 1)
-}, 3500)
+// setInterval(() => {
+//   heroImageElements.forEach((element, idx) => {
+//     element.style.left = `${element.style.left.slice(0, -1) - 100}%`
+//   })
+// }, 3000)
 
+/* Home Expansion Section */
+// accordion inside home expansion section
+const accordionButton = document.getElementById("accordion-button")
+const accordionContent = document.getElementById("accordion-content")
+const angleDown = document.getElementById("angle-down-icon")
+
+accordionButton.addEventListener("click", () => {
+  accordionContent.classList.toggle("row-1")
+  angleDown.classList.toggle("rotate")
+})
+
+//angle-down-rotate inside home expansion section
+
+/* Instrsection Observers for following Elements */
 //intersection observer animation
 const elementsToObserve = [
   document.getElementById("our-mission-image-container"),
