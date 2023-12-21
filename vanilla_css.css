@@ -1,0 +1,397 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+:root {
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+/* PurposeWiseCSS */
+.color-orange {
+  color: #eb6930;
+}
+.font-bold {
+  font-weight: bold;
+}
+.font-large {
+  font-size: 2.5rem;
+}
+.font-size-double {
+  font-size: 2rem;
+}
+.text-center {
+  text-align: center;
+}
+
+/* Navigation Bar */
+nav.navigation {
+  background-color: white;
+  position: sticky;
+  color: #217abe;
+  top: 0;
+  left: 0;
+  padding: 0.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0 1rem hsl(0, 0%, 80%);
+  height: 100px;
+  z-index: 10;
+}
+
+nav.navigation > .logo-container {
+  height: 100%;
+}
+
+nav.navigation > .logo-container > img {
+  display: block;
+  height: 100%;
+}
+
+nav.navigation > .bars-container {
+  display: none;
+}
+
+nav.navigation > .bars-container > .fa-bars {
+  font-size: 1.25rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+nav.navigation > ul {
+  list-style-type: none;
+}
+nav.navigation > ul {
+  list-style-type: none;
+  display: flex;
+}
+
+nav.navigation > ul > li {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+nav.navigation > ul > li > a {
+  text-decoration: none;
+  color: inherit;
+}
+nav.navigation > ul > .cross-button-container {
+  display: none;
+}
+
+nav.navigation > ul > .cross-button-container > .fa-xmark {
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Home Section */
+section.home-section {
+  min-height: calc(100vh - 100px);
+  display: flex;
+  gap: 1rem;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(42, 116, 186, 0.25),
+    rgba(103, 79, 156, 0.25)
+  );
+}
+
+section.home-section > aside.text-container {
+  width: 50%;
+  min-height: calc(100vh - 60px);
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 0.9rem;
+}
+section.home-section > aside.text-container > p {
+  padding: 0 4rem;
+  text-align: center;
+}
+
+section.home-section > aside.image-container {
+  width: 50%;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  overflow: hidden;
+  display: flex;
+  gap: 0.5rem;
+  position: relative;
+}
+section.home-section > aside.image-container > img {
+  position: absolute;
+  top: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: left 0.5s ease-in-out;
+}
+
+/* this is the container for the rest of the item */
+.container {
+  margin: 0 auto;
+  width: 90%;
+}
+
+/* expansion of home section */
+.expansion-of-home-section {
+  padding: 2rem 0;
+}
+.expansion-of-home-section > p {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.expansion-of-home-section > ul {
+  list-style-type: none;
+  display: flex;
+  gap: 0.25rem;
+}
+.expansion-of-home-section > ul > li {
+  flex-grow: 1;
+  flex-basis: 0;
+  padding: 0.5rem;
+  cursor: pointer;
+  position: relative;
+  box-shadow: 0px 0px 1rem 0px hsl(0, 0%, 80%);
+}
+.expansion-of-home-section > ul > li > .text-cover {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  transition: height 0.5s linear;
+}
+.expansion-of-home-section > ul > li:hover > .text-cover {
+  height: 0;
+}
+
+/* our-mission-section */
+.our-mission-section {
+  padding: 1rem 0;
+}
+.our-mission-section > .title {
+  text-align: center;
+  font-size: 4rem;
+  font-weight: bold;
+}
+.our-mission-section > .image-text-container {
+  display: flex;
+  gap: 0.5rem;
+}
+.our-mission-section > .image-text-container > * {
+  flex-grow: 1;
+  flex-basis: 0;
+}
+.our-mission-section > .image-text-container > .image-container > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.our-mission-section > .image-text-container > .text-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.our-mission-section > .image-text-container > .text-container > p {
+  text-align: center;
+  padding: 0 1rem;
+  font-size: 1.2rem;
+}
+
+/* Projects Section */
+.projects-section {
+  padding: 1rem 0;
+}
+.projects-section > .title {
+  font-size: 4rem;
+  font-weight: bold;
+  text-align: center;
+}
+.projects-section > .ul-image-container {
+  display: flex;
+  gap: 0.5rem;
+}
+.projects-section > .ul-image-container > * {
+  flex-grow: 1;
+  flex-basis: 0;
+}
+.projects-section > .ul-image-container > ul {
+  font-size: 1.25rem;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.projects-section > .ul-image-container > ul > li {
+  padding: 0.25rem 0;
+}
+.projects-section > .ul-image-container > .image-container > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.projects-section > .text-container > p:first-child {
+  padding: 0.5rem 0;
+}
+
+/* Contact Section */
+.contact-section {
+  padding: 1rem 0;
+}
+.contact-section > .title {
+  font-size: 4rem;
+  font-weight: bold;
+  text-align: center;
+}
+.contact-section > .contact-text > .para-container {
+  font-size: 1.25rem;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+/* Leadership section */
+.leadership-section {
+  padding: 1rem 0;
+}
+.leadership-section > .title {
+  font-size: 4rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.leadership-section > .flip-card-image-texts-container {
+  display: flex;
+  gap: 1rem;
+}
+.leadership-section > .flip-card-image-texts-container > * {
+  flex-grow: 1;
+  flex-basis: 0;
+}
+.leadership-section .leadership-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.leadership-section .leadership-text li {
+  margin-left: 1rem;
+}
+
+/* Responsive Media Queries */
+@media screen and (max-width: 992px) {
+  * {
+    scroll-padding-top: 60px;
+  }
+
+  /* Navigation Bar */
+  nav.navigation {
+    height: 60px;
+  }
+  nav.navigation > ul {
+    position: absolute;
+    width: 300px;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    transition: left 0.5s ease-out;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+  }
+  nav.navigation > ul > .cross-button-container {
+    text-align: right;
+  }
+  nav.navigation > .bars-container {
+    display: block;
+  }
+  nav.navigation > ul > .cross-button-container {
+    display: block;
+  }
+
+  /* Home Section */
+  section.home-section {
+    flex-direction: column-reverse;
+    gap: 0rem;
+  }
+  section.home-section > aside.text-container {
+    width: 100%;
+  }
+  section.home-section > aside.image-container {
+    width: 100%;
+    height: 100vh;
+    border-radius: 0;
+  }
+
+  /* expansion of home section */
+  .expansion-of-home-section > ul {
+    flex-direction: column;
+  }
+  .expansion-of-home-section > ul > li {
+    flex-direction: column;
+  }
+
+  /* our-mission-section */
+  .our-mission-section > .title {
+    font-size: 2rem;
+  }
+  .our-mission-section > .image-text-container {
+    flex-direction: column;
+  }
+  .our-mission-section > .image-text-container > .image-container > img {
+    height: 400px;
+  }
+  .our-mission-section > .image-text-container > .text-container > p {
+    font-size: 1rem;
+  }
+
+  /* projects-section */
+  .projects-section > .title {
+    font-size: 2rem;
+  }
+  .projects-section > .ul-image-container {
+    flex-direction: column;
+  }
+  .projects-section > .ul-image-container > .image-container > img {
+    width: 100%;
+    max-height: 400px;
+  }
+  .projects-section > .ul-image-container > ul {
+    margin: 0 1rem;
+    font-size: 1rem;
+  }
+
+  /* contacts-section */
+  .contact-section > .title {
+    font-size: 2rem;
+  }
+
+  /* leadership-section */
+  .leadership-section > .title {
+    font-size: 2rem;
+  }
+  .leadership-section > .flip-card-image-texts-container {
+    flex-direction: column;
+  }
+  .leadership-section > .flip-card-image-texts-container > .flip-card {
+    width: min(400px, 100%);
+  }
+}

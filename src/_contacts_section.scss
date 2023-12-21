@@ -1,0 +1,19 @@
+$orange: #eb6930;
+
+.contact-section {
+  .title {
+    padding: 0.5rem 0;
+    color: $orange;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: bold;
+  }
+  .contact-text {
+    .para-container {
+      font-size: 1.25rem;
+      width: fit-content;
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+}
