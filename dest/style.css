@@ -347,10 +347,10 @@ div.container {
   .our-mission-section .image-text-container {
     flex-direction: row;
   }
-}
-.our-mission-section .image-text-container > * {
-  flex-grow: 1;
-  flex-basis: 0;
+  .our-mission-section .image-text-container > * {
+    width: 50%;
+    flex-grow: 1;
+  }
 }
 .our-mission-section .image-text-container .image-container {
   box-shadow: 10px 10px 5px rgba(170, 170, 170, 0.5);
@@ -403,10 +403,10 @@ div.container {
   .projects-section .ul-image-container {
     flex-direction: row;
   }
-}
-.projects-section .ul-image-container > * {
-  flex-grow: 1;
-  flex-basis: 0;
+  .projects-section .ul-image-container > * {
+    flex-grow: 1;
+    width: 50%;
+  }
 }
 .projects-section .ul-image-container ul {
   padding: 1rem;

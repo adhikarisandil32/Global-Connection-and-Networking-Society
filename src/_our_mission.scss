@@ -19,11 +19,11 @@ $blue-lighter: #d4e8f7;
 
     @include responsive.lg {
       flex-direction: row;
-    }
 
-    & > * {
-      flex-grow: 1;
-      flex-basis: 0;
+      & > * {
+        width: 50%;
+        flex-grow: 1;
+      }
     }
 
     .image-container {

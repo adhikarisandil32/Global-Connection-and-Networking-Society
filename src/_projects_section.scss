@@ -9,11 +9,11 @@ $orange: #eb6930;
 
     @include responsive.lg {
       flex-direction: row;
-    }
 
-    & > * {
-      flex-grow: 1;
-      flex-basis: 0;
+      & > * {
+        flex-grow: 1;
+        width: 50%;
+      }
     }
 
     ul {
