@@ -241,13 +241,18 @@ div.container {
 
 .expansion-of-home-section {
   position: relative;
-  transform: translateY(-75px);
+  margin-top: -75px;
+  margin-bottom: 1rem;
   z-index: 20;
+}
+.expansion-of-home-section .container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 .expansion-of-home-section .intro-para {
   text-align: center;
-  margin-bottom: 1rem;
-  background-color: rgba(235, 105, 48, 0.8);
+  background-color: #eb6930;
   border-radius: 0.5rem;
   text-align: justify;
   color: #fff;
@@ -323,21 +328,19 @@ div.container {
   color: #eb6930;
 }
 
-.our-mission-section .title {
+.our-mission-section {
+  margin-bottom: 1rem;
+  background-image: linear-gradient(to top, #faddd1, #d4e8f7);
   padding: 1rem 0;
-  color: #eb6930;
-  text-align: center;
-  font-size: 2rem;
-  font-weight: bold;
 }
 @media (min-width: 992px) {
-  .our-mission-section .title {
-    font-size: 3rem;
+  .our-mission-section {
+    background-image: linear-gradient(to right, #d4e8f7, #faddd1);
   }
 }
 .our-mission-section .image-text-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   gap: 1rem;
 }
 @media (min-width: 992px) {
@@ -345,40 +348,52 @@ div.container {
     flex-direction: row;
   }
 }
-.our-mission-section .image-text-container * {
+.our-mission-section .image-text-container > * {
   flex-grow: 1;
   flex-basis: 0;
 }
+.our-mission-section .image-text-container .image-container {
+  box-shadow: 10px 10px 5px rgba(170, 170, 170, 0.5);
+  border-radius: 0.5rem;
+}
 .our-mission-section .image-text-container .image-container img {
+  display: block;
   width: 100%;
   height: 400px;
   border-radius: 0.5rem;
   object-fit: cover;
   object-position: center;
 }
+@media (min-width: 992px) {
+  .our-mission-section .image-text-container .image-container img {
+    height: 100%;
+  }
+}
 .our-mission-section .image-text-container .text-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-.our-mission-section .image-text-container .text-container p {
   text-align: justify;
   text-align-last: center;
-  padding: 0 1rem;
+  background-color: #eb6930;
+  color: #fff;
+  padding: 1rem;
+  box-shadow: 10px 10px 5px rgba(170, 170, 170, 0.5);
+  border-radius: 0.5rem;
 }
-
-.projects-section .title {
-  padding: 1rem 0;
-  color: #eb6930;
+.our-mission-section .image-text-container .text-container .title {
   text-align: center;
   font-size: 2rem;
   font-weight: bold;
+  margin-bottom: 1rem;
 }
 @media (min-width: 992px) {
-  .projects-section .title {
+  .our-mission-section .image-text-container .text-container .title {
     font-size: 3rem;
   }
 }
+
 .projects-section .ul-image-container {
   display: flex;
   flex-direction: column;
@@ -389,32 +404,49 @@ div.container {
     flex-direction: row;
   }
 }
+.projects-section .ul-image-container > * {
+  flex-grow: 1;
+  flex-basis: 0;
+}
 .projects-section .ul-image-container ul {
-  margin-left: 1rem;
+  padding: 1rem;
+  list-style-type: none;
   text-align: justify;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 1rem;
+  box-shadow: -10px 10px 5px rgba(170, 170, 170, 0.5);
+  border-radius: 0.5rem;
+  background-color: #eb6930;
+  color: #fff;
+}
+.projects-section .ul-image-container ul .title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
 }
 @media (min-width: 992px) {
-  .projects-section .ul-image-container ul {
-    flex-basis: 0;
-    flex-grow: 1;
+  .projects-section .ul-image-container ul .title {
+    font-size: 3rem;
   }
 }
-@media (min-width: 992px) {
-  .projects-section .ul-image-container .image-container {
-    flex-basis: 0;
-    flex-grow: 1;
-  }
+.projects-section .ul-image-container .image-container {
+  box-shadow: -10px 10px 5px rgba(170, 170, 170, 0.5);
+  border-radius: 0.5rem;
 }
 .projects-section .ul-image-container .image-container img {
+  display: block;
   width: 100%;
   height: 400px;
   border-radius: 0.5rem;
   object-fit: cover;
   object-position: center;
+}
+@media (min-width: 992px) {
+  .projects-section .ul-image-container .image-container img {
+    height: 100%;
+  }
 }
 .projects-section .text-container p:first-child {
   color: #eb6930;
