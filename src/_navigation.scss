@@ -1,4 +1,6 @@
 @use "responsive";
+
+$orange: #eb6930;
 $blue: #217abe;
 $white: #f2f2f2;
 $black: #454545;
@@ -44,7 +46,7 @@ nav.navigation {
       display: flex;
       flex-direction: column;
       gap: 1rem;
-      background-color: rgba(0, 0, 0, 0.9);
+      background-color: rgba($blue, 0.9);
       color: $white;
       padding: 1rem;
 

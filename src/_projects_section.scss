@@ -64,7 +64,9 @@ $black: #454545;
   }
   .text-container {
     p {
-      line-height: 1.5rem;
+      &:not(p:first-child) {
+        line-height: 1.5rem;
+      }
 
       &:first-child {
         color: $orange;
