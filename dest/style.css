@@ -470,6 +470,11 @@ div.container {
   background-image: linear-gradient(to bottom, #faddd1, #d4e8f7);
   padding: 1rem 0;
 }
+@media (min-width: 992px) {
+  .contact-section {
+    background-image: linear-gradient(to right, #faddd1, #d4e8f7);
+  }
+}
 .contact-section .contact-address {
   background-color: #217abe;
   width: 300px;

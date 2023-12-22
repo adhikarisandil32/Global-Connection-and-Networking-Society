@@ -8,6 +8,10 @@ $blue-darker: #175482;
   background-image: linear-gradient(to bottom, $orange-lighter, $blue-lighter);
   padding: 1rem 0;
 
+  @include responsive.lg {
+    background-image: linear-gradient(to right, $orange-lighter, $blue-lighter);
+  }
+
   .contact-address {
     background-color: $blue;
     width: 300px;
