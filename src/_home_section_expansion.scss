@@ -1,10 +1,12 @@
 @use "responsive";
 
 $orange: #eb6930;
+$white: #f2f2f2;
+$black: #454545;
 
 .expansion-of-home-section {
   position: relative;
-  margin-top: -75px;
+  margin-top: -35px;
   margin-bottom: 1rem;
   z-index: 20;
 
@@ -19,8 +21,9 @@ $orange: #eb6930;
     background-color: $orange;
     border-radius: 0.5rem;
     text-align: justify;
-    color: #fff;
+    color: $white;
     padding: 1rem;
+    line-height: 1.5rem;
 
     .accordion-button {
       display: flex;
@@ -76,21 +79,24 @@ $orange: #eb6930;
       border-radius: 0.5rem;
       border: 1px solid hsl(0, 0%, 80%);
       position: relative;
+      line-height: 1.5rem;
+      flex-grow: 1;
 
-      @include responsive.sm {
+      @include responsive.md {
         width: 49%;
       }
 
-      @include responsive.md {
+      @include responsive.lg {
         width: 32%;
       }
 
       @include responsive.xl {
-        flex-basis: 0;
-        flex-grow: 1;
+        width: 32%;
       }
 
       p {
+        color: $black;
+
         span {
           color: $orange;
         }

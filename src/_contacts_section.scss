@@ -1,5 +1,7 @@
 $orange: #eb6930;
 $blue: #217abe;
+$white: #f2f2f2;
+$black: #454545;
 $orange-lighter: #faddd1;
 $blue-lighter: #d4e8f7;
 $blue-darker: #175482;
@@ -26,7 +28,7 @@ $blue-darker: #175482;
     width: 300px;
     margin: 0 auto;
     border-radius: 0.5rem;
-    color: #fff;
+    color: $white;
     padding: 1rem;
     display: flex;
     flex-direction: column;

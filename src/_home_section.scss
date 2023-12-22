@@ -3,6 +3,8 @@
 
 $orange: #eb6930;
 $blue: #217abe;
+$white: #f2f2f2;
+$black: #454545;
 
 .home-section {
   $min-height: calc(100vh - 60px);
@@ -27,7 +29,7 @@ $blue: #217abe;
       flex-direction: column;
       justify-content: center;
       gap: 1rem;
-      color: white;
+      color: $white;
       z-index: 10;
 
       @include responsive.lg {
@@ -52,12 +54,17 @@ $blue: #217abe;
               font-size: 4rem;
             }
           }
+
+          &:last-child {
+            line-height: 1.5rem;
+            font-size: 1.25rem;
+          }
         }
       }
 
       .button-container {
         display: flex;
-        gap: 0.5rem;
+        gap: 1rem;
 
         .button {
           padding: 1rem 2.5rem;
@@ -104,7 +111,7 @@ $blue: #217abe;
       background-image: linear-gradient(
         to right,
         rgba(#000, 1),
-        rgba(#000, 0.75)
+        rgba(#000, 0.25)
       );
     }
 

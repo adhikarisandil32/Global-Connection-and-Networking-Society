@@ -2,6 +2,8 @@
 
 $orange: #eb6930;
 $slate: #416c63;
+$white: #f2f2f2;
+$black: #454545;
 
 .leadership-section {
   margin-bottom: 1rem;
@@ -64,13 +66,14 @@ $slate: #416c63;
         }
 
         .flip-card-back {
-          padding: 1rem;
+          padding: 4rem;
           background-color: $slate;
-          color: white;
+          color: $white;
           transform: rotateY(180deg);
           display: flex;
           justify-content: center;
           align-items: center;
+          line-height: 1.5rem;
         }
       }
 
@@ -88,6 +91,7 @@ $slate: #416c63;
       align-items: center;
       flex-basis: 0;
       flex-grow: 1;
+      line-height: 1.5rem;
 
       li {
         margin-left: 1rem;

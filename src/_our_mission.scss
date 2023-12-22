@@ -1,7 +1,10 @@
 @use "responsive";
+
 $orange: #eb6930;
 $orange-lighter: #faddd1;
 $blue-lighter: #d4e8f7;
+$white: #f2f2f2;
+$black: #454545;
 
 .our-mission-section {
   margin-bottom: 1rem;
@@ -14,7 +17,7 @@ $blue-lighter: #d4e8f7;
 
   .image-text-container {
     background-color: $orange;
-    color: #fff;
+    color: $white;
     border-radius: 0.5rem;
     box-shadow: 10px 10px 5px rgba(#aaaaaa, 0.5);
 
@@ -58,6 +61,7 @@ $blue-lighter: #d4e8f7;
       text-align-last: center;
       padding: 1rem;
       width: 100%;
+      line-height: 1.5rem;
 
       @include responsive.lg {
         width: 30%;
@@ -68,10 +72,6 @@ $blue-lighter: #d4e8f7;
         font-size: 2rem;
         font-weight: bold;
         margin-bottom: 1rem;
-
-        @include responsive.lg {
-          font-size: 3rem;
-        }
       }
     }
   }

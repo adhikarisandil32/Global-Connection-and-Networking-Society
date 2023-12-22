@@ -20,8 +20,7 @@
 }
 
 nav.navigation {
-  position: relative;
-  background-color: white;
+  background-color: #fff;
   color: #217abe;
   position: sticky;
   top: 0;
@@ -59,8 +58,10 @@ nav.navigation .nav-bar ul {
   transition: left 0.5s ease-out;
   display: flex;
   flex-direction: column;
+  gap: 1rem;
   background-color: rgba(0, 0, 0, 0.9);
-  color: #fff;
+  color: #f2f2f2;
+  padding: 1rem;
 }
 @media (min-width: 992px) {
   nav.navigation .nav-bar ul {
@@ -73,6 +74,7 @@ nav.navigation .nav-bar ul {
     justify-content: center;
     align-items: center;
     width: fit-content;
+    padding-left: 0;
   }
 }
 nav.navigation .nav-bar ul .cross-button-container {
@@ -89,7 +91,6 @@ nav.navigation .nav-bar ul .cross-button-container .fa-xmark {
   }
 }
 nav.navigation .nav-bar ul li {
-  font-weight: bold;
   text-align: center;
   position: relative;
   width: fit-content;
@@ -99,7 +100,7 @@ nav.navigation .nav-bar ul li::after {
   display: block;
   position: absolute;
   height: 2px;
-  background-color: #fff;
+  background-color: #f2f2f2;
   bottom: 0;
   left: 0;
   width: 0;
@@ -117,7 +118,6 @@ nav.navigation .nav-bar ul li a {
   display: block;
   cursor: pointer;
   text-align: left;
-  padding: 0.5rem 1rem;
   text-decoration: none;
   color: inherit;
 }
@@ -154,7 +154,7 @@ nav.navigation .nav-bar .bars-container {
   flex-direction: column;
   justify-content: center;
   gap: 1rem;
-  color: white;
+  color: #f2f2f2;
   z-index: 10;
 }
 @media (min-width: 992px) {
@@ -180,9 +180,13 @@ nav.navigation .nav-bar .bars-container {
     font-size: 4rem;
   }
 }
+.home-section .container .text-container p span:last-child {
+  line-height: 1.5rem;
+  font-size: 1.25rem;
+}
 .home-section .container .text-container .button-container {
   display: flex;
-  gap: 0.5rem;
+  gap: 1rem;
 }
 .home-section .container .text-container .button-container .button {
   padding: 1rem 2.5rem;
@@ -222,7 +226,7 @@ nav.navigation .nav-bar .bars-container {
   width: 100%;
   top: 0;
   left: 0;
-  background-image: linear-gradient(to right, black, rgba(0, 0, 0, 0.75));
+  background-image: linear-gradient(to right, black, rgba(0, 0, 0, 0.25));
 }
 .home-section .image-container img {
   height: 100%;
@@ -241,7 +245,7 @@ div.container {
 
 .expansion-of-home-section {
   position: relative;
-  margin-top: -75px;
+  margin-top: -35px;
   margin-bottom: 1rem;
   z-index: 20;
 }
@@ -255,8 +259,9 @@ div.container {
   background-color: #eb6930;
   border-radius: 0.5rem;
   text-align: justify;
-  color: #fff;
+  color: #f2f2f2;
   padding: 1rem;
+  line-height: 1.5rem;
 }
 .expansion-of-home-section .intro-para .accordion-button {
   display: flex;
@@ -306,22 +311,26 @@ div.container {
   border-radius: 0.5rem;
   border: 1px solid hsl(0, 0%, 80%);
   position: relative;
+  line-height: 1.5rem;
+  flex-grow: 1;
 }
-@media (min-width: 576px) {
+@media (min-width: 768px) {
   .expansion-of-home-section ul li {
     width: 49%;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .expansion-of-home-section ul li {
     width: 32%;
   }
 }
 @media (min-width: 1200px) {
   .expansion-of-home-section ul li {
-    flex-basis: 0;
-    flex-grow: 1;
+    width: 32%;
   }
+}
+.expansion-of-home-section ul li p {
+  color: #454545;
 }
 .expansion-of-home-section ul li p span {
   color: #eb6930;
@@ -339,7 +348,7 @@ div.container {
 }
 .our-mission-section .image-text-container {
   background-color: #eb6930;
-  color: #fff;
+  color: #f2f2f2;
   border-radius: 0.5rem;
   box-shadow: 10px 10px 5px rgba(170, 170, 170, 0.5);
   display: flex;
@@ -381,6 +390,7 @@ div.container {
   text-align-last: center;
   padding: 1rem;
   width: 100%;
+  line-height: 1.5rem;
 }
 @media (min-width: 992px) {
   .our-mission-section .image-text-container .text-container {
@@ -393,11 +403,6 @@ div.container {
   font-weight: bold;
   margin-bottom: 1rem;
 }
-@media (min-width: 992px) {
-  .our-mission-section .image-text-container .text-container .title {
-    font-size: 3rem;
-  }
-}
 
 .projects-section .ul-image-container {
   display: flex;
@@ -406,7 +411,7 @@ div.container {
   box-shadow: -10px 10px 5px rgba(170, 170, 170, 0.5);
   border-radius: 0.5rem;
   background-color: #eb6930;
-  color: #fff;
+  color: #f2f2f2;
 }
 @media (min-width: 992px) {
   .projects-section .ul-image-container {
@@ -425,6 +430,7 @@ div.container {
   justify-content: center;
   flex-direction: column;
   gap: 1rem;
+  line-height: 1.5rem;
 }
 @media (min-width: 992px) {
   .projects-section .ul-image-container ul {
@@ -435,11 +441,6 @@ div.container {
   text-align: center;
   font-size: 2rem;
   font-weight: bold;
-}
-@media (min-width: 992px) {
-  .projects-section .ul-image-container ul .title {
-    font-size: 3rem;
-  }
 }
 .projects-section .ul-image-container .image-container {
   width: 100%;
@@ -458,10 +459,14 @@ div.container {
   object-fit: cover;
   object-position: center;
 }
+.projects-section .text-container p {
+  line-height: 1.5rem;
+}
 .projects-section .text-container p:first-child {
   color: #eb6930;
   font-size: 2rem;
   text-align: center;
+  margin-top: 1.5rem;
   padding: 0.5rem 0;
 }
 
@@ -487,7 +492,7 @@ div.container {
   width: 300px;
   margin: 0 auto;
   border-radius: 0.5rem;
-  color: #fff;
+  color: #f2f2f2;
   padding: 1rem;
   display: flex;
   flex-direction: column;
@@ -589,13 +594,14 @@ div.container {
   object-position: top center;
 }
 .leadership-section .flip-card-image-texts-container .flip-card .flip-card-inner .flip-card-back {
-  padding: 1rem;
+  padding: 4rem;
   background-color: #416c63;
-  color: white;
+  color: #f2f2f2;
   transform: rotateY(180deg);
   display: flex;
   justify-content: center;
   align-items: center;
+  line-height: 1.5rem;
 }
 .leadership-section .flip-card-image-texts-container .flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
@@ -607,6 +613,7 @@ div.container {
   align-items: center;
   flex-basis: 0;
   flex-grow: 1;
+  line-height: 1.5rem;
 }
 .leadership-section .flip-card-image-texts-container .leadership-text li {
   margin-left: 1rem;

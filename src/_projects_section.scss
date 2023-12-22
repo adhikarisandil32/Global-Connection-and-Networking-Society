@@ -1,5 +1,8 @@
 @use "responsive";
+
 $orange: #eb6930;
+$white: #f2f2f2;
+$black: #454545;
 
 .projects-section {
   .ul-image-container {
@@ -9,7 +12,7 @@ $orange: #eb6930;
     box-shadow: -10px 10px 5px rgba(#aaaaaa, 0.5);
     border-radius: 0.5rem;
     background-color: $orange;
-    color: #fff;
+    color: $white;
 
     @include responsive.lg {
       flex-direction: row;
@@ -28,6 +31,7 @@ $orange: #eb6930;
       justify-content: center;
       flex-direction: column;
       gap: 1rem;
+      line-height: 1.5rem;
 
       @include responsive.lg {
         width: 30%;
@@ -37,10 +41,6 @@ $orange: #eb6930;
         text-align: center;
         font-size: 2rem;
         font-weight: bold;
-
-        @include responsive.lg {
-          font-size: 3rem;
-        }
       }
     }
 
@@ -64,10 +64,13 @@ $orange: #eb6930;
   }
   .text-container {
     p {
+      line-height: 1.5rem;
+
       &:first-child {
         color: $orange;
         font-size: 2rem;
         text-align: center;
+        margin-top: 1.5rem;
         padding: 0.5rem 0;
       }
     }
