@@ -6,28 +6,32 @@ $orange: #eb6930;
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    box-shadow: -10px 10px 5px rgba(#aaaaaa, 0.5);
+    border-radius: 0.5rem;
+    background-color: $orange;
+    color: #fff;
 
     @include responsive.lg {
       flex-direction: row;
 
       & > * {
         flex-grow: 1;
-        width: 50%;
       }
     }
 
     ul {
       padding: 1rem;
+      width: 100%;
       list-style-type: none;
       text-align: justify;
       display: flex;
       justify-content: center;
       flex-direction: column;
       gap: 1rem;
-      box-shadow: -10px 10px 5px rgba(#aaaaaa, 0.5);
-      border-radius: 0.5rem;
-      background-color: $orange;
-      color: #fff;
+
+      @include responsive.lg {
+        width: 30%;
+      }
 
       .title {
         text-align: center;
@@ -41,20 +45,20 @@ $orange: #eb6930;
     }
 
     .image-container {
-      box-shadow: -10px 10px 5px rgba(#aaaaaa, 0.5);
+      width: 100%;
       border-radius: 0.5rem;
+
+      @include responsive.lg {
+        width: 70%;
+      }
 
       img {
         display: block;
         width: 100%;
-        height: 400px;
+        max-height: 500px;
         border-radius: 0.5rem;
         object-fit: cover;
         object-position: center;
-
-        @include responsive.lg {
-          height: 100%;
-        }
       }
     }
   }
