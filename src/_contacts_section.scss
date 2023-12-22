@@ -16,16 +16,9 @@ $blue-darker: #175482;
     background-image: linear-gradient(to right, $orange-lighter, $blue-lighter);
   }
 
-  .container {
-    height: 100%;
-    display: flex;
-    align-items: center;
-  }
-
   .contact-address {
     background-color: $blue;
-    height: 80%;
-    width: 300px;
+    width: fit-content;
     margin: 0 auto;
     border-radius: 0.5rem;
     color: $white;
