@@ -6,14 +6,24 @@ $blue-darker: #175482;
 
 .contact-section {
   background-image: linear-gradient(to bottom, $orange-lighter, $blue-lighter);
-  padding: 1rem 0;
+  height: calc(75vh - 100px);
+  display: flex;
+  align-items: center;
 
   @include responsive.lg {
     background-image: linear-gradient(to right, $orange-lighter, $blue-lighter);
   }
 
+  .container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
   .contact-address {
+    border: 2px solid black;
     background-color: $blue;
+    height: 80%;
     width: 300px;
     margin: 0 auto;
     border-radius: 0.5rem;
@@ -21,6 +31,7 @@ $blue-darker: #175482;
     padding: 1rem;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 1rem;
   }
 

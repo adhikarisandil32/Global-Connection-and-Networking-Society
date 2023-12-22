@@ -147,7 +147,7 @@ nav.navigation .nav-bar .bars-container {
 .home-section .container {
   z-index: 10;
 }
-.home-section .container aside.text-container {
+.home-section .container .text-container {
   height: 100%;
   width: 75%;
   display: flex;
@@ -158,34 +158,34 @@ nav.navigation .nav-bar .bars-container {
   z-index: 10;
 }
 @media (min-width: 992px) {
-  .home-section .container aside.text-container {
+  .home-section .container .text-container {
     flex-grow: 1;
     flex-basis: 0;
     height: calc(100vh - 100px);
     width: 60%;
   }
 }
-.home-section .container aside.text-container p {
+.home-section .container .text-container p {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
-.home-section .container aside.text-container p span:first-child {
+.home-section .container .text-container p span:first-child {
   color: #eb6930;
   font-weight: bold;
   font-size: 3rem;
 }
 @media (min-width: 576px) {
-  .home-section .container aside.text-container p span:first-child {
+  .home-section .container .text-container p span:first-child {
     font-size: 4rem;
   }
 }
-.home-section .container aside.text-container .button-container {
+.home-section .container .text-container .button-container {
   display: flex;
   gap: 0.5rem;
 }
-.home-section .container aside.text-container .button-container .button {
-  padding: 0.5rem 1rem;
+.home-section .container .text-container .button-container .button {
+  padding: 1rem 2.5rem;
   border-radius: 0.25rem;
   cursor: pointer;
   background-color: #eb6930;
@@ -196,10 +196,10 @@ nav.navigation .nav-bar .bars-container {
   align-items: center;
   text-align: center;
 }
-.home-section .container aside.text-container .button-container .button:hover {
+.home-section .container .text-container .button-container .button:hover {
   background-color: #e95819;
 }
-.home-section aside.image-container {
+.home-section .image-container {
   min-height: calc(100vh - 100px);
   overflow: hidden;
   position: absolute;
@@ -209,12 +209,12 @@ nav.navigation .nav-bar .bars-container {
   left: 0;
 }
 @media (min-width: 992px) {
-  .home-section aside.image-container {
+  .home-section .image-container {
     flex-grow: 1;
     flex-basis: 0;
   }
 }
-.home-section aside.image-container::after {
+.home-section .image-container::after {
   content: "";
   display: block;
   position: absolute;
@@ -224,7 +224,7 @@ nav.navigation .nav-bar .bars-container {
   left: 0;
   background-image: linear-gradient(to right, black, rgba(0, 0, 0, 0.75));
 }
-.home-section aside.image-container img {
+.home-section .image-container img {
   height: 100%;
   width: 100%;
   object-fit: cover;
@@ -468,15 +468,24 @@ div.container {
 
 .contact-section {
   background-image: linear-gradient(to bottom, #faddd1, #d4e8f7);
-  padding: 1rem 0;
+  height: calc(75vh - 100px);
+  display: flex;
+  align-items: center;
 }
 @media (min-width: 992px) {
   .contact-section {
     background-image: linear-gradient(to right, #faddd1, #d4e8f7);
   }
 }
+.contact-section .container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
 .contact-section .contact-address {
+  border: 2px solid black;
   background-color: #217abe;
+  height: 80%;
   width: 300px;
   margin: 0 auto;
   border-radius: 0.5rem;
@@ -484,6 +493,7 @@ div.container {
   padding: 1rem;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 1rem;
 }
 .contact-section .title {
@@ -525,6 +535,9 @@ div.container {
   color: inherit;
 }
 
+.leadership-section {
+  margin-bottom: 1rem;
+}
 .leadership-section .title {
   padding: 1rem 0;
   color: #eb6930;

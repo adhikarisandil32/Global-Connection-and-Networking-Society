@@ -20,7 +20,7 @@ $blue: #217abe;
   .container {
     z-index: 10;
 
-    aside.text-container {
+    .text-container {
       height: 100%;
       width: 75%;
       display: flex;
@@ -60,7 +60,7 @@ $blue: #217abe;
         gap: 0.5rem;
 
         .button {
-          padding: 0.5rem 1rem;
+          padding: 1rem 2.5rem;
           border-radius: 0.25rem;
           cursor: pointer;
           background-color: $orange;
@@ -79,7 +79,7 @@ $blue: #217abe;
     }
   }
 
-  aside.image-container {
+  .image-container {
     min-height: $min-height;
     overflow: hidden;
     position: absolute;
