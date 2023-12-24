@@ -173,7 +173,7 @@ nav.navigation .nav-bar .bars-container {
 .home-section .container .text-container p span:first-child {
   color: #eb6930;
   font-weight: bold;
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 @media (min-width: 576px) {
   .home-section .container .text-container p span:first-child {
@@ -182,7 +182,12 @@ nav.navigation .nav-bar .bars-container {
 }
 .home-section .container .text-container p span:last-child {
   line-height: 1.5rem;
-  font-size: 1.25rem;
+  font-size: 1rem;
+}
+@media (min-width: 576px) {
+  .home-section .container .text-container p span:last-child {
+    font-size: 1.25rem;
+  }
 }
 .home-section .container .text-container .button-container {
   display: flex;
