@@ -1,11 +1,5 @@
 @use "responsive";
 
-$orange: #eb6930;
-$orange-lighter: #faddd1;
-$blue-lighter: #d4e8f7;
-$white: #f2f2f2;
-$black: #454545;
-
 .our-mission-section {
   margin-bottom: 1rem;
   background-image: linear-gradient(to top, $orange-lighter, $blue-lighter);

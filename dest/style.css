@@ -19,6 +19,11 @@
   }
 }
 
+div.container {
+  width: min(1200px, 90%);
+  margin: 0 auto;
+}
+
 nav.navigation {
   background-color: #fff;
   color: #217abe;
@@ -241,11 +246,6 @@ nav.navigation .nav-bar .bars-container {
   display: block;
   position: absolute;
   top: 0;
-}
-
-div.container {
-  width: min(1200px, 90%);
-  margin: 0 auto;
 }
 
 .expansion-of-home-section {

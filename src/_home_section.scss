@@ -1,10 +1,4 @@
 @use "responsive";
-@use "sass:color";
-
-$orange: #eb6930;
-$blue: #217abe;
-$white: #f2f2f2;
-$black: #454545;
 
 .home-section {
   $min-height: calc(100vh - 60px);

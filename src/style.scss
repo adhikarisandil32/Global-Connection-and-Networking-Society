@@ -1,4 +1,5 @@
 @use "responsive";
+@import "variables";
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 $font-family: "Roboto", sans-serif;
@@ -23,6 +24,14 @@ $orange: #eb6930;
   }
 }
 
+//container for all
+@import "container";
+
+//depending on each section
 @import "navigation";
 @import "home_section";
-@import "container";
+@import "home_section_expansion";
+@import "our_mission";
+@import "projects_section";
+@import "contacts_section";
+@import "leadership_section";
