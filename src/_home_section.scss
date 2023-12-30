@@ -1,7 +1,7 @@
 @use "responsive";
 
 .home-section {
-  $min-height: calc(100vh - 60px);
+  $min-height: max(500px, calc(100vh - 60px));
   height: $min-height;
   display: flex;
   gap: 1rem;
@@ -9,7 +9,7 @@
 
   @include responsive.lg {
     flex-direction: row;
-    $min-height: calc(100vh - 100px);
+    $min-height: max(500px, calc(100vh - 100px));
     height: $min-height;
   }
 
@@ -29,7 +29,6 @@
       @include responsive.lg {
         flex-grow: 1;
         flex-basis: 0;
-        height: calc(100vh - 100px);
         width: 60%;
       }
 
@@ -87,7 +86,9 @@
   .image-container {
     min-height: $min-height;
     overflow: hidden;
+    display: flex;
     position: absolute;
+    overflow: hidden;
     height: 100%;
     width: 100%;
     top: 0;
@@ -115,12 +116,9 @@
 
     img {
       height: 100%;
-      width: 100%;
+      min-width: 100%;
       object-fit: cover;
       object-position: center;
-      display: block;
-      position: absolute;
-      top: 0;
     }
   }
 }

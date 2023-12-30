@@ -1,4 +1,4 @@
-//slide in slide out animations
+//slide in slide out animations for navigations
 const navigationOpenButton = document.getElementById("navigation-open-button")
 const navigationCloseButton = document.getElementById("navigation-close-button")
 const navigationMenu = document.getElementById("navigation-menu")
@@ -16,20 +16,14 @@ navigationCloseButton.addEventListener("click", () => {
   navigationMenu.style.left = `-${leftSideSpace}`
 })
 
-//home-section-animation
-const heroImageContainer = document.getElementById("hero-image-container")
-const heroImageElements = [...heroImageContainer.children]
+/* Hero Image Animation */
+import { SliderAnimation } from "./slide_in_animation_module.js"
 
-heroImageElements.forEach((element, idx) => {
-  element.style.left = `${idx * 100}%`
-  element.style.transition = "left 1s linear"
-})
-
-// setInterval(() => {
-//   heroImageElements.forEach((element, idx) => {
-//     element.style.left = `${element.style.left.slice(0, -1) - 100}%`
-//   })
-// }, 3000)
+new SliderAnimation(
+  document.getElementById("hero-image-container"),
+  1000,
+  3000
+).animate()
 
 /* Home Expansion Section */
 // accordion inside home expansion section

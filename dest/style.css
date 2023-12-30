@@ -138,7 +138,7 @@ nav.navigation .nav-bar .bars-container {
 }
 
 .home-section {
-  height: calc(100vh - 60px);
+  height: max(500px, 100vh - 60px);
   display: flex;
   gap: 1rem;
   position: relative;
@@ -146,7 +146,7 @@ nav.navigation .nav-bar .bars-container {
 @media (min-width: 992px) {
   .home-section {
     flex-direction: row;
-    height: calc(100vh - 100px);
+    height: max(500px, 100vh - 100px);
   }
 }
 .home-section .container {
@@ -166,7 +166,6 @@ nav.navigation .nav-bar .bars-container {
   .home-section .container .text-container {
     flex-grow: 1;
     flex-basis: 0;
-    height: calc(100vh - 100px);
     width: 60%;
   }
 }
@@ -214,9 +213,11 @@ nav.navigation .nav-bar .bars-container {
   background-color: #e95819;
 }
 .home-section .image-container {
-  min-height: calc(100vh - 100px);
+  min-height: max(500px, 100vh - 100px);
   overflow: hidden;
+  display: flex;
   position: absolute;
+  overflow: hidden;
   height: 100%;
   width: 100%;
   top: 0;
@@ -240,12 +241,9 @@ nav.navigation .nav-bar .bars-container {
 }
 .home-section .image-container img {
   height: 100%;
-  width: 100%;
+  min-width: 100%;
   object-fit: cover;
   object-position: center;
-  display: block;
-  position: absolute;
-  top: 0;
 }
 
 .expansion-of-home-section {
