@@ -1,12 +1,61 @@
 @use "responsive";
-$orange: #eb6930;
 
-section.expansion-of-home-section {
-  padding: 2rem 0;
+.expansion-of-home-section {
+  position: relative;
+  margin-top: -35px;
+  margin-bottom: 1rem;
+  z-index: 20;
 
-  & > p {
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .intro-para {
     text-align: center;
-    margin-bottom: 1rem;
+    background-color: $orange;
+    border-radius: 0.5rem;
+    text-align: justify;
+    color: $white;
+    padding: 1rem;
+    line-height: 1.5rem;
+
+    .accordion-button {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      padding: 0.5rem 0;
+
+      span {
+        display: block;
+        font-weight: bold;
+      }
+
+      .angle-down {
+        transition: transform 0.25s linear;
+        transform-origin: center center;
+      }
+      .angle-down.rotate {
+        transform: rotate(90deg);
+      }
+    }
+
+    .accordion-content {
+      display: grid;
+      grid-template-rows: 0fr;
+      overflow: hidden;
+      transition: grid-template-rows 0.25s linear;
+
+      p {
+        min-height: 0;
+      }
+    }
+
+    .accordion-content.row-1 {
+      grid-template-rows: 1fr;
+    }
   }
 
   ul {
@@ -22,44 +71,31 @@ section.expansion-of-home-section {
     }
 
     li {
-      border: 1px solid red;
       padding: 1rem;
       border-radius: 0.5rem;
       border: 1px solid hsl(0, 0%, 80%);
-      cursor: pointer;
       position: relative;
+      line-height: 1.5rem;
+      flex-grow: 1;
 
-      @include responsive.sm {
+      @include responsive.md {
         width: 49%;
       }
 
-      @include responsive.md {
+      @include responsive.lg {
         width: 32%;
       }
 
       @include responsive.xl {
-        flex-basis: 0;
-        flex-grow: 1;
+        width: 32%;
       }
 
       p {
+        color: $black;
+
         span {
           color: $orange;
         }
-      }
-
-      .text-cover {
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        left: 0;
-        top: 0;
-        background-color: rgba(255, 255, 255, 0.5);
-        transition: height 0.5s linear;
-      }
-
-      &:hover .text-cover {
-        height: 0;
       }
     }
   }

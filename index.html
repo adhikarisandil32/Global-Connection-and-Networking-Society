@@ -4,72 +4,91 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="dest/style.css" />
-    <!-- <link rel="stylesheet" href="vanilla_css.css" /> -->
     <link rel="icon" type="image/x-icon" href="assets/logo.png" />
-
     <title>Global Digital Empowerment Society</title>
   </head>
 
   <body>
     <!-- Navigation Bar -->
     <nav class="navigation">
-      <div class="logo-container">
-        <img src="assets/logo.png" alt="GDES Logo" />
-      </div>
-      <ul id="navigation-menu" class="navigation-menu">
-        <div class="cross-button-container">
-          <i class="fa-solid fa-xmark" id="navigation-close-button"></i>
+      <div class="container nav-bar">
+        <div class="logo-container">
+          <a href="">
+            <img src="assets/logo.png" alt="GDES Logo" />
+          </a>
         </div>
-        <li><a href="#home-section">HOME</a></li>
-        <li><a href="#our-mission-section">Our Mission</a></li>
-        <li><a href="#projects-section">Projects</a></li>
-        <li><a href="#contact-section">Contacts</a></li>
-        <li><a href="#leadership-section">Leadership</a></li>
-        <li>News and Events</li>
-      </ul>
-      <div class="bars-container">
-        <i class="fa-solid fa-bars" id="navigation-open-button"></i>
+        <ul id="navigation-menu">
+          <div class="cross-button-container">
+            <i class="fa-solid fa-xmark" id="navigation-close-button"></i>
+          </div>
+          <li><a href="#home-section">Home</a></li>
+          <li><a href="#our-mission-section">Our Mission</a></li>
+          <li><a href="#projects-section">Projects</a></li>
+          <li><a href="#contact-section">Contact</a></li>
+          <li><a href="#leadership-section">Leadership</a></li>
+          <li><a href="#">News & Events</a></li>
+        </ul>
+        <div class="bars-container">
+          <i class="fa-solid fa-bars" id="navigation-open-button"></i>
+        </div>
       </div>
     </nav>
 
     <!-- Home Section -->
     <section class="home-section" id="home-section">
-      <aside class="text-container">
-        <p>
-          <span class="color-orange font-bold font-large">
-            Empowering Underserved <br />Communities <br />
-          </span>
-          <span>
-            and Underdeveloped Countries and People <br />Through Digital
-            Literacy, Globally.
-          </span>
-        </p>
-      </aside>
-      <aside class="image-container" id="hero-image-container">
+      <div class="container">
+        <div class="text-container">
+          <p>
+            <span>
+              Global Digital <br />
+              Environment Society
+            </span>
+            <span>
+              California-based non-profit, empowering underserved communities
+              and underdeveloped countries people through digital literacy,
+              globally.
+            </span>
+          </p>
+          <div class="button-container">
+            <a class="button" href="#contact-section">Contact</a>
+            <a class="button" href="#">News & Events</a>
+          </div>
+        </div>
+      </div>
+      <div class="image-container" id="hero-image-container">
         <img src="assets/hero-image-1.jpg" alt="hero-image-1" />
         <img src="assets/hero-image-2.jpg" alt="hero-image-2" />
         <img src="assets/hero-image-3.jpg" alt="hero-image-3" />
         <img src="assets/hero-image-4.jpg" alt="hero-image-4" />
         <img src="assets/hero-image-5.jpg" alt="hero-image-5" />
-      </aside>
+      </div>
     </section>
 
-    <div class="container">
-      <!-- expansion of home section -->
-      <section class="expansion-of-home-section">
-        <p>
-          <span class="color-orange">Bridging the Divide:</span> The Crucial
-          Role of Digital Literacy in Underdeveloped Countries In a world
-          increasingly dominated by technology, digital literacy has become an
-          essential passport to progress, especially for those living in
-          underdeveloped countries. Equipping individuals with the skills to
-          navigate the digital landscape unlocks a treasure trove of
-          opportunities, paving the way for:
-        </p>
+    <!-- expansion of home section -->
+    <section class="expansion-of-home-section">
+      <div class="container">
+        <div class="intro-para">
+          <div class="accordion-button" id="accordion-button">
+            <span class="title">Bridging the Divide Through</span>
+            <span class="angle-down" id="angle-down-icon">
+              <i class="fa-solid fa-angle-down"></i>
+            </span>
+          </div>
+          <div class="accordion-content" id="accordion-content">
+            <p>
+              The Crucial Role of Digital Literacy in Underdeveloped Countries
+              In a world increasingly dominated by technology, digital literacy
+              has become an essential passport to progress, especially for those
+              living in underdeveloped countries. Equipping individuals with the
+              skills to navigate the digital landscape unlocks a treasure trove
+              of opportunities, paving the way for:
+            </p>
+          </div>
+        </div>
         <ul>
           <li>
             <p>
-              <span class="color-orange">Economic Empowerment:</span>
+              <span>Economic Empowerment:</span>
               <br /><br />
               Digital literacy opens doors to new job markets. From remote work
               and online entrepreneurship to e-commerce and digital agriculture,
@@ -77,7 +96,6 @@
               previously inaccessible. Participation in the global digital
               economy fuels local economies and fosters sustainable development.
             </p>
-            <div class="text-cover"></div>
           </li>
           <li>
             <p>
@@ -89,7 +107,6 @@
               upskilling, and access to higher education, fueling a more
               educated and competitive workforce.
             </p>
-            <div class="text-cover"></div>
           </li>
           <li>
             <p>
@@ -101,7 +118,6 @@
               awareness campaigns and disease prevention initiatives, leading to
               healthier populations.
             </p>
-            <div class="text-cover"></div>
           </li>
           <li>
             <p>
@@ -114,7 +130,6 @@
               media platforms enable communities to voice concerns, advocate for
               change, and hold leaders accountable.
             </p>
-            <div class="text-cover"></div>
           </li>
           <li>
             <p>
@@ -127,19 +142,20 @@
               transcends borders, promotes inclusivity, and propels communities
               towards a brighter future in the global economy.
             </p>
-            <div class="text-cover"></div>
           </li>
         </ul>
-      </section>
+      </div>
+    </section>
 
-      <!-- Our Mission Section -->
-      <section class="our-mission-section" id="our-mission-section">
-        <div class="title color-orange">OUR MISSION</div>
+    <!-- Our Mission Section -->
+    <section class="our-mission-section" id="our-mission-section">
+      <div class="container">
         <div class="image-text-container">
           <div class="image-container" id="our-mission-image-container">
             <img src="assets/our-mission.jpg" alt="our-mission" />
           </div>
           <div class="text-container" id="our-mission-text-container">
+            <p class="title">OUR MISSION</p>
             <p>
               To equip individuals in underdeveloped communities with the
               essential skills and knowledge they need to unlock their full
@@ -152,13 +168,15 @@
             </p>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- Projects Section -->
-      <section class="projects-section" id="projects-section">
-        <div class="title"><span class="color-orange">PROJECTS</span></div>
+    <!-- Projects Section -->
+    <section class="projects-section" id="projects-section">
+      <div class="container">
         <div class="ul-image-container">
           <ul id="projects-texts-ul">
+            <div class="title"><span class="color-orange">PROJECTS</span></div>
             <li>
               <p>
                 GDES's Global IT initiative bridges the digital divide in
@@ -179,9 +197,7 @@
           </div>
         </div>
         <div class="text-container">
-          <p class="color-orange font-size-double text-center">
-            Why is this our focused project for the year 2024 and 2025?
-          </p>
+          <p>Why is this our focused project for the year 2024 and 2025?</p>
           <p>
             In today's digital landscape, IT skills are more than just technical
             jargon - they're a passport to a world brimming with opportunity for
@@ -229,25 +245,74 @@
           </p>
           <br />
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- Contact Section -->
-      <section class="contact-section" id="contact-section">
-        <div class="title color-orange">CONTACTS</div>
-        <div class="contact-text">
-          <div class="para-container">
-            <p>GDES</p>
-            <p>3380 Flair Dr Suite: 227</p>
-            <p>El Monte, CA, 91731</p>
-            <p>Phone: +1 626 747 5906</p>
-            <p>Email: info@globaldes.org</p>
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact-section">
+      <div class="container">
+        <div class="contact-address">
+          <div class="title">CONTACT INFO</div>
+          <div class="contact-text-container">
+            <div class="contact-text contact-text-phone">
+              <p>
+                <i class="fa-solid fa-phone"></i>
+              </p>
+              <p>
+                <span>Phone</span>
+                <span>+1 626 747 5906</span>
+              </p>
+            </div>
+            <div class="contact-text contact-text-email">
+              <p>
+                <i class="fa-solid fa-envelope"></i>
+              </p>
+              <p>
+                <span>Email</span>
+                <span>info@globaldes.org</span>
+              </p>
+            </div>
+            <div class="contact-text contact-text-address">
+              <p>
+                <i class="fa-solid fa-location-dot"></i>
+              </p>
+              <p>
+                <span>GDES</span>
+                <span>3380 Flair Dr Suite: 227</span>
+                <span>El Monte, CA, 91731</span>
+              </p>
+            </div>
+            <div class="social-media-icons-container">
+              <p>
+                <a href="https://www.facebook.com/" target="_blank">
+                  <i class="fa-brands fa-facebook"></i>
+                </a>
+              </p>
+              <p>
+                <a href="https://twitter.com/" target="_blank">
+                  <i class="fa-brands fa-x-twitter"></i>
+                </a>
+              </p>
+              <p>
+                <a href="https://www.instagram.com/" target="_blank">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+              </p>
+              <p>
+                <a href="https://www.linkedin.com/" target="_blank">
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+              </p>
+            </div>
           </div>
         </div>
-      </section>
+        <div class="contact-form"></div>
+      </div>
+    </section>
 
+    <div class="container">
       <!-- Leadership Section -->
       <section class="leadership-section" id="leadership-section">
-        <div class="title color-orange">LEADERSHIP</div>
         <div class="flip-card-image-texts-container">
           <div class="flip-card" id="flip-card-container">
             <div class="flip-card-inner">
@@ -255,6 +320,7 @@
                 <img src="assets/leadership.jpg" alt="Avatar" />
               </div>
               <div class="flip-card-back">
+                <div class="title">LEADERSHIP</div>
                 <p>
                   For 30 years, I've built bridges, not just in technology, but
                   in people's lives. With a blend of engineering expertise
@@ -346,10 +412,11 @@
     </div>
 
     <!-- Javascript Injection -->
-    <script type="text/javascript" src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
     <script
       src="https://kit.fontawesome.com/802aab03d5.js"
       crossorigin="anonymous"
     ></script>
+    <script type="module" src="script.js"></script>
   </body>
 </html>

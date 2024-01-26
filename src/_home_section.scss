@@ -1,78 +1,124 @@
 @use "responsive";
-$orange: #eb6930;
 
-section.home-section {
-  $min-height: calc(100vh - 60px);
+.home-section {
+  $min-height: max(500px, calc(100vh - 60px));
+  height: $min-height;
   display: flex;
-  flex-direction: column-reverse;
   gap: 1rem;
-  background-image: linear-gradient(
-    to right,
-    hsla(255, 76%, 74%, 0.5),
-    hsla(134, 76%, 68%, 0.5)
-  );
+  position: relative;
 
   @include responsive.lg {
     flex-direction: row;
-    background-image: linear-gradient(
-      to bottom,
-      hsla(255, 76%, 74%, 0.5),
-      hsla(134, 76%, 68%, 0.5)
-    );
+    $min-height: max(500px, calc(100vh - 100px));
+    height: $min-height;
   }
 
-  aside.text-container {
-    min-height: calc($min-height / 2);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  .container {
+    z-index: 10;
 
-    @include responsive.lg {
-      flex-grow: 1;
-      flex-basis: 0;
-      height: calc(100vh - 100px);
-    }
-
-    p {
-      padding: 0 4rem;
-      text-align: center;
+    .text-container {
+      height: 100%;
+      width: 75%;
       display: flex;
       flex-direction: column;
-      gap: 0.5rem;
+      justify-content: center;
+      gap: 1rem;
+      color: $white;
+      z-index: 10;
 
-      span {
-        &:first-child {
-          color: $orange;
-          font-weight: bold;
-          font-size: 2rem;
+      @include responsive.lg {
+        flex-grow: 1;
+        flex-basis: 0;
+        width: 60%;
+      }
+
+      p {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+
+        span {
+          &:first-child {
+            color: $orange;
+            font-weight: bold;
+            font-size: 2.5rem;
+
+            @include responsive.sm {
+              font-size: 4rem;
+            }
+          }
+
+          &:last-child {
+            line-height: 1.5rem;
+            font-size: 1rem;
+
+            @include responsive.sm {
+              font-size: 1.25rem;
+            }
+          }
+        }
+      }
+
+      .button-container {
+        display: flex;
+        gap: 1rem;
+
+        .button {
+          padding: 1rem 2.5rem;
+          border-radius: 0.25rem;
+          cursor: pointer;
+          background-color: $orange;
+          text-decoration: none;
+          color: inherit;
+          transition: background-color 0.25s linear;
+          display: flex;
+          align-items: center;
+          text-align: center;
+        }
+
+        .button:hover {
+          background-color: darken($orange, 5%);
         }
       }
     }
   }
 
-  aside.image-container {
+  .image-container {
     min-height: $min-height;
     overflow: hidden;
-    position: relative;
-    height: fit-content;
+    display: flex;
+    position: absolute;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
 
     @include responsive.lg {
       flex-grow: 1;
       flex-basis: 0;
-      border-top-left-radius: 1rem;
-      border-bottom-left-radius: 1rem;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      background-image: linear-gradient(
+        to right,
+        rgba(#000, 1),
+        rgba(#000, 0.25)
+      );
     }
 
     img {
       height: 100%;
-      width: 100%;
+      min-width: 100%;
       object-fit: cover;
       object-position: center;
-      display: block;
-      position: absolute;
-      top: 0;
-      transition: left 1s ease-out;
     }
   }
 }

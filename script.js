@@ -1,4 +1,4 @@
-//slide in slide out animations
+//slide in slide out animations for navigations
 const navigationOpenButton = document.getElementById("navigation-open-button")
 const navigationCloseButton = document.getElementById("navigation-close-button")
 const navigationMenu = document.getElementById("navigation-menu")
@@ -16,24 +16,29 @@ navigationCloseButton.addEventListener("click", () => {
   navigationMenu.style.left = `-${leftSideSpace}`
 })
 
-//home-section-animation
-const heroImageContainer = document.getElementById("hero-image-container")
+/* Hero Image Animation */
+import { SliderAnimation } from "./slide_in_animation_module.js"
 
-const heroImageElements = [...heroImageContainer.children]
+new SliderAnimation(
+  document.getElementById("hero-image-container"),
+  1000,
+  3000
+).animate()
 
-heroImageElements.forEach((element, index) => {
-  element.style.left = `${index * 100}%`
+/* Home Expansion Section */
+// accordion inside home expansion section
+const accordionButton = document.getElementById("accordion-button")
+const accordionContent = document.getElementById("accordion-content")
+const angleDown = document.getElementById("angle-down-icon")
+
+accordionButton.addEventListener("click", () => {
+  accordionContent.classList.toggle("row-1")
+  angleDown.classList.toggle("rotate")
 })
 
-setInterval(() => {
-  heroImageElements.forEach((element) => {
-    element.style.left = `${element.style.left.slice(0, -1) - 100}%`
-  })
-  heroImageElements[0].style.left = `${(heroImageElements.length - 1) * 100}%`
-  heroImageElements.push(heroImageElements[0])
-  heroImageElements.splice(0, 1)
-}, 3500)
+//angle-down-rotate inside home expansion section
 
+/* Instrsection Observers for following Elements */
 //intersection observer animation
 const elementsToObserve = [
   document.getElementById("our-mission-image-container"),

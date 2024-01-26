@@ -1,16 +1,7 @@
 @use "responsive";
 
-$orange: #eb6930;
-$slate: #416c63;
-
 .leadership-section {
-  .title {
-    padding: 1rem 0;
-    color: $orange;
-    text-align: center;
-    font-size: 2rem;
-    font-weight: bold;
-  }
+  margin: 1rem 0;
 
   .flip-card-image-texts-container {
     display: flex;
@@ -24,7 +15,7 @@ $slate: #416c63;
     .flip-card {
       $border-radius: 0.5rem;
       perspective: 1000px;
-      min-height: 400px;
+      min-height: 450px;
       width: min(400px, 100%);
       margin: 0 auto;
       cursor: pointer;
@@ -64,11 +55,25 @@ $slate: #416c63;
         .flip-card-back {
           padding: 1rem;
           background-color: $slate;
-          color: white;
+          color: $white;
           transform: rotateY(180deg);
           display: flex;
+          flex-direction: column;
           justify-content: center;
           align-items: center;
+          line-height: 1.5rem;
+
+          @include responsive.sm {
+            padding: 4rem;
+          }
+
+          .title {
+            padding: 1rem 0;
+            color: $white;
+            text-align: center;
+            font-size: 2rem;
+            font-weight: bold;
+          }
         }
       }
 
@@ -86,6 +91,7 @@ $slate: #416c63;
       align-items: center;
       flex-basis: 0;
       flex-grow: 1;
+      line-height: 1.5rem;
 
       li {
         margin-left: 1rem;
