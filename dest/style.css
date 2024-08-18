@@ -621,3 +621,7 @@ nav.navigation .nav-bar .bars-container {
 .leadership-section .flip-card-image-texts-container .leadership-text li {
   margin-left: 1rem;
 }
+
+.bold {
+  font-weight: bold;
+}
