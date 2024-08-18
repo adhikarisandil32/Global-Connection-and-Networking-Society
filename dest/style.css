@@ -19,6 +19,10 @@
   }
 }
 
+.bold {
+  font-weight: bold;
+}
+
 div.container {
   width: min(1200px, 90%);
   margin: 0 auto;
@@ -485,6 +489,7 @@ nav.navigation .nav-bar .bars-container {
   }
 }
 .contact-section .contact-address {
+  padding: 2.5rem;
   background-color: #217abe;
   width: fit-content;
   margin: 0 auto;
@@ -620,8 +625,4 @@ nav.navigation .nav-bar .bars-container {
 }
 .leadership-section .flip-card-image-texts-container .leadership-text li {
   margin-left: 1rem;
-}
-
-.bold {
-  font-weight: bold;
 }
